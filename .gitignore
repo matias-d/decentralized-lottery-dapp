@@ -1,0 +1,43 @@
+# ==============================
+# Node modules
+# ==============================
+node_modules/
+frontend/node_modules/
+smart-contracts/node_modules/
+
+# ==============================
+# Build / dist / cache
+# ==============================
+# React
+frontend/build/
+frontend/dist/
+# Hardhat
+smart-contracts/artifacts/
+smart-contracts/cache/
+smart-contracts/node_modules/
+
+# ==============================
+# Environment variables
+# ==============================
+.env
+frontend/.env
+smart-contracts/.env
+
+# ==============================
+# Logs
+# ==============================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================
+# OS generated files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# VSCode
+# ==============================
+.vscode/

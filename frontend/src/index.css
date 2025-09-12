@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0d0d0f; /* Fondo principal */
+  --color-card: #1a1a1d; /* Fondo de cards */
+  --color-card-light: #1d1d20;
+  --color-title: #ffffff; /* Títulos */
+  --color-text: #9ca3af; /* Texto secundario */
+  --color-accent: #00ffa3; /* Acento primario (verde neon) */
+  --color-accent-dark: #003d23;
+  --color-border: #2a2a2d; /* Bordes */
+  --color-placeholder: #6b7280; /* Placeholder inputs */
+  --color-bnb: #f0b90b;
+
+  /* 🟢 Radius (consistencia en botones, cards, modales) */
+  --radius-sm: 0.5rem; /* inputs chicos */
+  --radius-md: 0.75rem; /* botones normales */
+  --radius-lg: 1rem; /* cards */
+  --radius-xl: 1.5rem; /* modales grandes */
+
+  /* 📏 Spacing */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+
+  /* 🔤 Tipografía */
+  --font-sans: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-style: normal;
+    background-color: var(--color-bg);
+    color: var(--color-title);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .border-default {
+    border: 0.1px solid var(--color-border);
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-r from-[#00ffa3] to-[#17CF8C];
+  }
+
+  .border-winner {
+    border-radius: 1rem;
+  }
+
+  .border-winner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 2px;
+    background: linear-gradient(
+      to left,
+      rgba(253, 230, 138, 1) 0%,
+      rgba(253, 230, 138, 0) 90%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .max-container {
+    @apply mx-auto max-w-[640px];
+  }
+
+  .padding-container {
+    @apply px-4 lg:px-0;
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 10px rgba(253, 230, 138, 0.6),
+        0 0 20px rgba(253, 230, 138, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(253, 230, 138, 0.9),
+        0 0 40px rgba(253, 230, 138, 0.6);
+    }
+  }
+
+  .glow {
+    animation: glow 2s infinite;
+  }
+}
