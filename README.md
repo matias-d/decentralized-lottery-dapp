@@ -201,7 +201,7 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**Matias Cabrera**
+**Matias Ezequiel Cabrera**
 - Frontend Development (React, TypeScript, Tailwind)
 - Smart Contract Development (Solidity)
 - Hardhat Configuration and Deployment
