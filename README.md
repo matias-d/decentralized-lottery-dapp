@@ -67,10 +67,10 @@ npm run dev
 
 ### Smart Contracts Setup
 ```bash
-cd contracts
+cd smart-contracts
 npm install
 npx hardhat compile
-npx hardhat run scripts/deploy.js --network bsctestnet
+npx hardhat run scripts/deploy.ts
 ```
 
 ## 📁 Project Structure
@@ -97,7 +97,7 @@ decentralized-lottery-dapp/
 │   │   ├── services/
 │   │   └── utils/
 │   └── package.json
-├── contracts/
+├── smart-contracts/
 │   ├── contracts/
 │   ├── scripts/
 │   ├── test/
