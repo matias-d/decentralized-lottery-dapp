@@ -315,7 +315,7 @@ export async function _buyLottery(
 
   const tx = await lottery.methods.buyTickets(ticketNum).send({
     from: account,
-    gas: (gasEstimate * BigInt(2)).toString(),
+    gas: Math.floor(Number(gasEstimate) * 1.2).toString(),
   });
   return tx;
 }
