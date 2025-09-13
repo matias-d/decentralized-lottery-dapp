@@ -54,7 +54,7 @@ This DApp implements a complete lottery system where users can purchase tokens w
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/matias-d/decentralized-lottery-dapp.git
+git clone https://github.com/matias-d/lottery-dapp.git
 cd decentralized-lottery-dapp
 ```
 
@@ -86,7 +86,7 @@ npx hardhat run scripts/deploy.ts
 ## 📁 Project Structure
 
 ```
-decentralized-lottery-dapp/
+lottery-dapp/
 ├── frontend/
 │   ├── public/
 │   │   ├── abi/
