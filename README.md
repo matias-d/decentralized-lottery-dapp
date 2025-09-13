@@ -89,8 +89,7 @@ npx hardhat run scripts/deploy.ts
 lottery-dapp/
 ├── frontend/
 │   ├── public/
-│   │   ├── abi/
-│   │   └── assets/
+│   │   └── abi/
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── dashboard/
