@@ -6,8 +6,6 @@ export default function RoundsDisclousure() {
   const { lotteryData } = useLottery();
   const { rounds } = lotteryData;
 
-  console.log("Rondas", rounds);
-
   return (
     <DisclosureUI title="Round history" className="mb-4">
       {rounds.length > 0 ? (

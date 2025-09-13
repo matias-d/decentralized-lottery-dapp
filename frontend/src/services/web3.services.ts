@@ -120,7 +120,8 @@ export async function getLotteryContract(): Promise<LotteryHelper> {
     const tokensInCirculation = tokensInCirculationRaw as unknown as string;
     const totalParticipants = Number(totalParticipantsRaw);
     const totalTickets = Number(totalTicketsRaw);
-    const contractBalance = contractBalanceRaw as unknown as string;
+    const contractBalanceWei = contractBalanceRaw as unknown as string;
+    const contractBalance = web3.utils.fromWei(contractBalanceWei, "ether");
     const currentRound = Number(currentRoundRaw);
 
     const rounds = await getAllRounds(currentRound, lottery);

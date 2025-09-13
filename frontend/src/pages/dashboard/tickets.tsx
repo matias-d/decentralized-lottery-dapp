@@ -11,8 +11,6 @@ import HistoryTickets from "../../components/dashboard/tickets/history-tickets";
 export default function Tickets() {
   const { account, loading } = useLottery();
 
-  console.log("Accounts", account);
-
   if (loading) return <LoadingUI title="Loading lottery data..." />;
   return (
     <section className="space-y-xs">
