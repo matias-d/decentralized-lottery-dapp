@@ -64,6 +64,16 @@ cd frontend
 npm install
 npm run dev
 ```
+## Environment Setup
+
+Before deploying smart contracts, create a `.env` file in the root of the project to store your **MetaMask private key**.  
+
+The private key is used by Hardhat to sign transactions on the BSC Testnet
+
+```bash
+# smart-contracts/.env
+PRIVATE_KEY="your_metamask_private_key_here
+```
 
 ### Smart Contracts Setup
 ```bash
