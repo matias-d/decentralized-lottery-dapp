@@ -236,6 +236,6 @@ contract Lottery is Ownable {
 
     /// @notice Returns the balance in ethers of the contract
     function balanceEthersSC() public view returns (uint256) {
-        return address(this).balance / 1 ether;
+        return address(this).balance;
     }
 }

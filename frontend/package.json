@@ -1,7 +1,10 @@
 {
   "name": "frontend",
   "private": true,
+  "author": "Matias Ezequiel Cabrera",
+  "license": "MIT",
   "version": "0.0.0",
+  "description": "Frontend for a decentralized lottery DApp built with React, interacting with smart contracts on BSC Testnet (tBNB).",
   "type": "module",
   "scripts": {
     "dev": "vite",

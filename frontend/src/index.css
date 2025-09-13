@@ -1,31 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0d0d0f; /* Fondo principal */
-  --color-card: #1a1a1d; /* Fondo de cards */
+  --color-bg: #0d0d0f;
+  --color-card: #1a1a1d;
   --color-card-light: #1d1d20;
-  --color-title: #ffffff; /* Títulos */
-  --color-text: #9ca3af; /* Texto secundario */
-  --color-accent: #00ffa3; /* Acento primario (verde neon) */
+  --color-title: #ffffff;
+  --color-text: #9ca3af;
+  --color-accent: #00ffa3;
   --color-accent-dark: #003d23;
-  --color-border: #2a2a2d; /* Bordes */
-  --color-placeholder: #6b7280; /* Placeholder inputs */
+  --color-border: #2a2a2d;
+  --color-placeholder: #6b7280;
   --color-bnb: #f0b90b;
 
-  /* 🟢 Radius (consistencia en botones, cards, modales) */
-  --radius-sm: 0.5rem; /* inputs chicos */
-  --radius-md: 0.75rem; /* botones normales */
-  --radius-lg: 1rem; /* cards */
-  --radius-xl: 1.5rem; /* modales grandes */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 
-  /* 📏 Spacing */
   --space-xs: 0.5rem; /* 8px */
   --space-sm: 1rem; /* 16px */
   --space-md: 1.5rem; /* 24px */
   --space-lg: 2rem; /* 32px */
   --space-xl: 3rem; /* 48px */
 
-  /* 🔤 Tipografía */
   --font-sans: "Space Grotesk", sans-serif;
 }
 

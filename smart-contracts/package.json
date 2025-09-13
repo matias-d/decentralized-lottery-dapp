@@ -2,13 +2,16 @@
   "name": "smart-contracts",
   "version": "1.0.0",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "test": "npx hardhat test",
+    "dev": "npx hardhat node"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Matias Ezequiel Cabrera",
+  "description": "Smart contracts for a decentralized lottery DApp built with Hardhat, deployed on BSC Testnet",
   "type": "module",
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^3.0.2",
