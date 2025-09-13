@@ -228,13 +228,24 @@ export async function _buyTokens(
   account: string,
   amountTokens: string
 ) {
-  // Obten el precio correcto del contrato
-  const valueWeiRaw = await lottery.methods.priceTokens(amountTokens).call();
-  const valueWei = valueWeiRaw as unknown as string;
+  const web3 = await getWeb3();
 
+  if (!amountTokens || Number(amountTokens) <= 0) {
+    throw new Error("Invalid amount of tokens");
+  }
+
+  // Price per token in tBNB (0.001 tBNB)
+  const pricePerTokenWei = web3.utils.toWei("0.001", "ether");
+
+  // Total price for the requested amount
+  const totalPrice = (
+    BigInt(pricePerTokenWei) * BigInt(amountTokens)
+  ).toString();
+
+  // Send transaction
   const tx = await lottery.methods.buyTokens(amountTokens).send({
     from: account,
-    value: valueWei.toString(),
+    value: totalPrice,
   });
 
   return tx;

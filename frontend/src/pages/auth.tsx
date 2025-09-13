@@ -43,9 +43,16 @@ export default function Auth() {
             <div className="flex flex-col items-start gap-y-1 text-gray-300">
               <p>Connected account:</p>
               <div>
-                <p className="text-sm text-accent truncate max-w-64 lg:max-w-72">
-                  {account?.account}
-                </p>
+                {!account?.account ? (
+                  <p className="text-sm text-text flex items-center gap-x-1">
+                    Getting your account...{" "}
+                    <LoaderCircle className="animate-spin" size={16} />
+                  </p>
+                ) : (
+                  <p className="text-sm text-accent truncate max-w-64 lg:max-w-72">
+                    {account?.account}
+                  </p>
+                )}
               </div>
             </div>
           )}
