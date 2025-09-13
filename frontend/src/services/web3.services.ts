@@ -228,12 +228,13 @@ export async function _buyTokens(
   account: string,
   amountTokens: string
 ) {
-  const web3 = await getWeb3();
+  // Obten el precio correcto del contrato
+  const valueWeiRaw = await lottery.methods.priceTokens(amountTokens).call();
+  const valueWei = valueWeiRaw as unknown as string;
 
-  const valueWei = web3.utils.toWei(amountTokens, "ether");
   const tx = await lottery.methods.buyTokens(amountTokens).send({
     from: account,
-    value: valueWei,
+    value: valueWei.toString(),
   });
 
   return tx;

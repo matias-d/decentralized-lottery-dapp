@@ -10,7 +10,9 @@ declare global {
 
 export async function getWeb3(): Promise<Web3> {
   if (window.ethereum) {
-    const web3 = new Web3(window.ethereum);
+    const web3 = new Web3(
+      window.ethereum || "https://data-seed-prebsc-1-s1.binance.org:8545"
+    );
 
     try {
       // Solicita acceso a las cuentas
