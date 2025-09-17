@@ -87,31 +87,31 @@ npx hardhat run scripts/deploy.ts
 
 ```
 lottery-dapp/
-├── frontend/
-│   ├── public/
-│   │   └── abi/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── dashboard/
-│   │   │   │   ├── lottery/
-│   │   │   │   ├── tickets/
-│   │   │   │   └── tokens/
-│   │   │   └── ui/
-│   │   ├── context/
-│   │   ├── hooks/
-│   │   ├── interfaces/
-│   │   ├── layouts/
-│   │   ├── lib/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── utils/
-│   └── package.json
-├── smart-contracts/
-│   ├── contracts/
-│   ├── scripts/
+├── frontend/ # React/Vite frontend application
+│   ├── public/ # Static assets served by the web server
+│   │   └── abi/ # Smart contract ABIs for frontend integration
+│   ├── src/ 
+│   │   ├── components/ # Reusable UI components
+│   │   │   ├── dashboard/ # Dashboard-specific components
+│   │   │   │   ├── lottery/ # Lottery game interface components
+│   │   │   │   ├── tickets/ # Ticket management components
+│   │   │   │   └── tokens/ # Token display and interaction components
+│   │   │   └── ui/ # Generic UI components (buttons, modals, etc.)
+│   │   ├── context/ # React context providers for state management
+│   │   ├── hooks/ # Custom React hooks for reusable logic
+│   │   ├── interfaces/ # TypeScript interfaces
+│   │   ├── layouts/ # Page layout components
+│   │   ├── lib/ # Third-party library configurations and utilities
+│   │   ├── pages/ # Page components
+│   │   ├── services/ # API calls and external service integrations
+│   │   └── utils/ # Helper functions and utility modules
+│   └── package.json # Frontend dependencies and scripts
+├── smart-contracts/ # Blockchain smart contracts and deployment
+│   ├── contracts/ # Solidity smart contract source files
+│   ├── scripts/ # Deployment and interaction scripts
 │   ├── test/
-│   └── hardhat.config.js
-└── README.md
+│   └── hardhat.config.js # Hardhat configuration for development/deployment
+└── README.md # Project documentation and setup instructions
 ```
 
 ## 🎮 How to Use
@@ -194,7 +194,6 @@ lottery-dapp/
 
 ### Code Quality & Design
 - **TypeScript** for type safety
-- **ESLint** and **Prettier** for code formatting
 - **Clean Architecture** with separation of concerns
 - **Modern Dark Mode Interface** with professional aesthetics
 - **Responsive Design** optimized for all devices
