@@ -65,7 +65,7 @@ export default function RoundCard({ card }: Props) {
                 {card.winner}
               </p>
               <ExternalLink
-                className="text-accent lg:-ml-2  group-hover:opacity-80 transition-colors"
+                className="text-accent lg:-ml-0.5  group-hover:opacity-80 transition-colors"
                 size={22}
               />
             </div>

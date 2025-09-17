@@ -29,9 +29,12 @@ export default function Auth() {
             className="size-12"
           />
           {loading ? (
-            <div className="flex items-center gap-x-2 text-gray-300">
-              <p>Connecting your wallet...</p>
-              <LoaderCircle className="animate-spin" />
+            <div className="flex items-center gap-x-12 w-full">
+              <div className="flex flex-col gap-x-2 text-gray-300">
+                <p>Connecting your wallet</p>
+                <p className="text-sm text-text">This may take a moment.</p>
+              </div>
+              <LoaderCircle className="animate-spin" size={30} />
             </div>
           ) : !loading && error ? (
             <div className="flex items-center gap-x-2 text-gray-300">
@@ -43,10 +46,9 @@ export default function Auth() {
             <div className="flex flex-col items-start gap-y-1 text-gray-300">
               <p>Connected account:</p>
               <div>
-                {!account?.account ? (
+                {!account?.account && !loading ? (
                   <p className="text-sm text-text flex items-center gap-x-1">
                     Getting your account...{" "}
-                    <LoaderCircle className="animate-spin" size={16} />
                   </p>
                 ) : (
                   <p className="text-sm text-accent truncate max-w-64 lg:max-w-72">

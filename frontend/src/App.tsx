@@ -9,6 +9,7 @@ import Lottery from "./pages/dashboard/lottery";
 import Tickets from "./pages/dashboard/tickets";
 import Tokens from "./pages/dashboard/tokens";
 import Home from "./pages/dashboard/home";
+import NotFound from "./pages/not-found";
 import Auth from "./pages/auth";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <LotteryProvider>
         <Routes>
           <Route path="/" element={<Auth />} />
+          <Route path="*" element={<NotFound />} />
 
           {/* Dashboard */}
           <Route path="/dashboard" element={<DashboardLayout />}>

@@ -46,7 +46,6 @@ export function useWinnerToast({ lotterySC, account, update }: Props) {
             }
 
             localStorage.setItem("lastRoundId", roundNumber.toString());
-            // Llamamos a la función que nos pasaron
             await update();
           }
         });
