@@ -85,33 +85,33 @@ npx hardhat run scripts/deploy.ts
 
 ## 📁 Project Structure
 
-```
+```bash
 lottery-dapp/
-├── frontend/ # React/Vite frontend application
-│   ├── public/ # Static assets served by the web server
-│   │   └── abi/ # Smart contract ABIs for frontend integration
+├── frontend/                # React/Vite frontend application
+│   ├── public/              
+│   │   └── abi/             # Smart contract ABIs for frontend integration
 │   ├── src/ 
-│   │   ├── components/ # Reusable UI components
-│   │   │   ├── dashboard/ # Dashboard-specific components
+│   │   ├── components/      
+│   │   │   ├── dashboard/   # Dashboard-specific components
 │   │   │   │   ├── lottery/ # Lottery game interface components
 │   │   │   │   ├── tickets/ # Ticket management components
-│   │   │   │   └── tokens/ # Token display and interaction components
-│   │   │   └── ui/ # Generic UI components (buttons, modals, etc.)
-│   │   ├── context/ # React context providers for state management
-│   │   ├── hooks/ # Custom React hooks for reusable logic
-│   │   ├── interfaces/ # TypeScript interfaces
-│   │   ├── layouts/ # Page layout components
-│   │   ├── lib/ # Third-party library configurations and utilities
-│   │   ├── pages/ # Page components
-│   │   ├── services/ # API calls and external service integrations
-│   │   └── utils/ # Helper functions and utility modules
-│   └── package.json # Frontend dependencies and scripts
-├── smart-contracts/ # Blockchain smart contracts and deployment
-│   ├── contracts/ # Solidity smart contract source files
-│   ├── scripts/ # Deployment and interaction scripts
+│   │   │   │   └── tokens/  # Token display and interaction components
+│   │   │   └── ui/          # Generic UI components (buttons, modals, etc.)
+│   │   ├── context/         # React context providers for state management
+│   │   ├── hooks/           # Custom React hooks for reusable logic
+│   │   ├── interfaces/      # TypeScript interfaces
+│   │   ├── layouts/         # Page layout components
+│   │   ├── lib/             # Third-party library configurations and utilities
+│   │   ├── pages/           # Page index components
+│   │   ├── services/        # API calls and external service integrations
+│   │   └── utils/           # Helper functions and utility modules
+│   └── package.json         
+├── smart-contracts/      # Blockchain smart contracts and deployment
+│   ├── contracts/        # Solidity smart contract source files
+│   ├── scripts/          # Deployment and interaction scripts
 │   ├── test/
 │   └── hardhat.config.js # Hardhat configuration for development/deployment
-└── README.md # Project documentation and setup instructions
+└── README.md             # Project documentation and setup instructions
 ```
 
 ## 🎮 How to Use
